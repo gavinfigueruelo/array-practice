@@ -5,11 +5,11 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
+function repeat(str, i) {
+  str = `${str}, `;
+return str.repeat(i);
+};
+console.log(repeat('sunshine', 3));
 
 
 
@@ -23,13 +23,21 @@
 
 // Put your answer below -------------------------
 
+const a = [1,2,3,4]
+let b = reverseArr(a);
+function reverseArray(arr) {
+  let newarr = new Array;
+  let newarr = [];
+  for (var i = 0; i < arr.length; i++) {
+    newarr.push(arr[i]);
+    newarr.unshift(arr[i]);
+  }
+  return newarr
+  return newarr;
+};
 
-
-
-
-
-
-
+console.log(b);
+console.log(reverseArray(a));
 
 
 // -----------------------------------------------
@@ -40,13 +48,12 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
+let array = [1, false, 7, null, 0]
+let array = [1, false, 7, null, 0, NaN, 9]
+function noFalsy(arr) {
+  return arr.filter(Boolean);
+}
+console.log(noFalsy(array));
 
 
 // -----------------------------------------------
@@ -59,13 +66,19 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
+const myArray = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]]
+function objArray(arr) {
+  const myObj = {};
+  for (var i = 0; i < arr.length; i++) {
+    // ['name', 'Charlie']
+    const key = arr[i][0];//hey everytime you loop grab the index 0 in the array and set it to key;
+    const value = arr[i][1];
+    //add the key to the object then set the value to the key
+    myObj[key] = value;
+  }
+  return myObj;
+}
+objArray(myArray);
 
 
 // -----------------------------------------------
@@ -77,14 +90,17 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
-
+let array1 = [1,2,3,4,5,4,3]
+function removeDup(arr) {
+  noDupArr = []
+  for (var i = 0; i < arr.length; i++) {
+    if(noDupArr.indexOf(arr[i]) === -1){ //if it returns -1 which means it did not find it then push the number thru
+      noDupArr.push(arr[i]);
+    }
+  }
+  return noDupArr;
+};
+removeDup(array1);
 
 // -----------------------------------------------
 
@@ -98,13 +114,14 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
+function arrMatch(a, b) {
+  if (JSON.stringify(a) === JSON.stringify(b))
+  { return true;
+  } else {
+    return false;
+  }
+};
+arrMatch([1,2, 'c',5], [1,2,3,4]);
 
 
 // -----------------------------------------------
